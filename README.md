@@ -1,14 +1,15 @@
 # GroceryListCounter
 
-1. Summary of the project and the problem it solved  
-The Corner Grocer project required building a console-based C++ application that reads a text file containing grocery item names (one item per line), counts the frequency of each item in a case-insensitive way, and gives the user an interactive menu. The menu lets users search for the frequency of a specific item, print a sorted list of all items with their counts, or display a text-based histogram using asterisks. The program also automatically creates a backup file (frequency.dat) at startup.
+1. Summary of the project and the problem it solved
+The Corner Grocer project required building a console-based C++ application that reads a text file containing grocery item names (one item per line), counts the frequency of each item in a case-insensitive way, and gives the user an interactive menu. The menu lets users search for the frequency of a specific item,
+print a sorted list of all items with their counts, or display a text-based histogram using asterisks. The program also automatically creates a backup file (frequency.dat) at startup.
 The core problem it solved was turning raw, messy purchase data into useful, quickly accessible information for a small grocery store—essentially a lightweight inventory/sales frequency tracker.
 
-2. What I did particularly well
+3. What I did particularly well
 I think the strongest part of my solution was the clean separation of concerns using the GroceryTracker class. All the data loading, frequency counting, searching, printing, and backup logic lives inside the class, while main() only handles the menu loop. This made the code much easier to read and test.
 I also handled case-insensitivity correctly with the toLower() helper and properly capitalized the first letter when displaying items. Creating the backup file automatically at program start was a nice touch that met the requirements without extra user steps.
 
-3. Where I could enhance the code
+4. Where I could enhance the code
 Several improvements would make the program more robust and professional:
 
 Input validation: The menu uses cin >> choice, which can fail or leave the input stream in a bad state if the user types letters. Adding proper validation (or using a safer input method) would prevent crashes or infinite loops.
