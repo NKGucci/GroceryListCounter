@@ -1,0 +1,17 @@
+# Visual Studio build outputs
+x64/
+Debug/
+Release/
+.vs/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.log
+*.tlog
+*.idb
+*.ipdb
+*.iobj
+
+# User-specific project settings
+*.vcxproj.user
