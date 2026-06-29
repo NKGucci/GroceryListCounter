@@ -14,6 +14,7 @@ Several improvements would make the program more robust and professional:
 
 Input validation: The menu uses cin >> choice, which can fail or leave the input stream in a bad state if the user types letters. Adding proper validation (or using a safer input method) would prevent crashes or infinite loops.
 Use unordered_map for lookups: Since we only need fast frequency checks and don’t strictly require sorted output for every operation, an unordered_map could offer faster average-case performance for very large files (though map is fine for this small dataset).
+
 Configurable file paths: Hard-coding the filenames makes the program less flexible. Passing filenames as command-line arguments or reading them from a config file would make it more adaptable.
 Better error handling and logging: More descriptive error messages and possibly logging to a file would improve maintainability in a real-world setting.
 
