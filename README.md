@@ -12,32 +12,32 @@ I also handled case-insensitivity correctly with the toLower() helper and proper
 4. Where I could enhance the code
 Several improvements would make the program more robust and professional:
 
-Input validation: The menu uses cin >> choice, which can fail or leave the input stream in a bad state if the user types letters. Adding proper validation (or using a safer input method) would prevent crashes or infinite loops.
-Use unordered_map for lookups: Since we only need fast frequency checks and don’t strictly require sorted output for every operation, an unordered_map could offer faster average-case performance for very large files (though map is fine for this small dataset).
+  Input validation: The menu uses cin >> choice, which can fail or leave the input stream in a bad state if the user types letters. Adding proper validation (or using a safer input method) would prevent crashes or infinite loops.
+  Use unordered_map for lookups: Since we only need fast frequency checks and don’t strictly require sorted output for every operation, an unordered_map could offer faster average-case performance for very large files (though map is fine for this small dataset).
 
-Configurable file paths: Hard-coding the filenames makes the program less flexible. Passing filenames as command-line arguments or reading them from a config file would make it more adaptable.
-Better error handling and logging: More descriptive error messages and possibly logging to a file would improve maintainability in a real-world setting.
+  Configurable file paths: Hard-coding the filenames makes the program less flexible. Passing filenames as command-line arguments or reading them from a config file would make it more adaptable.
+  Better error handling and logging: More descriptive error messages and possibly logging to a file would improve maintainability in a real-world setting.
 
-These changes would increase reliability, performance for larger datasets, and ease of future modification.
+  These changes would increase reliability, performance for larger datasets, and ease of future modification.
 
 4. Most challenging pieces and how I overcame them
 The trickiest parts were:
 
-Correctly stripping the Windows carriage return (\r) when reading lines with getline().
-Formatting the histogram neatly with setw() and asterisks while keeping the output aligned.
+  Correctly stripping the Windows carriage return (\r) when reading lines with getline().
+  Formatting the histogram neatly with setw() and asterisks while keeping the output aligned.
 
-I overcame these by testing small pieces incrementally, using the Visual Studio debugger to inspect strings, and consulting cppreference.com for std::map and std::setw behavior.
+  I overcame these by testing small pieces incrementally, using the Visual Studio debugger to inspect strings, and consulting cppreference.com for std::map and std::setw behavior.
 
 5. Transferable skills
 This project strengthened several skills I’ll use again:
 
-Reading and writing text files in C++.
-Using STL containers (map) and string manipulation.
-Designing a simple menu-driven program with a class.
-Creating backup/output files automatically.
-Thinking about data cleaning and how to turn messy inputs into useable data.
+  Reading and writing text files in C++.
+  Using STL containers (map) and string manipulation.
+  Designing a simple menu-driven program with a class.
+  Creating backup/output files automatically.
+  Thinking about data cleaning and how to turn messy inputs into useable data.
 
-These skills directly transfer to future projects involving data processing, logging, inventory systems, or any application that needs to read, analyze, and report on text-based data.
+  These skills directly transfer to future projects involving data processing, logging, inventory systems, or any application that needs to read, analyze, and report on text-based data.
 
 6. How I made the program maintainable, readable, and adaptable
 I kept the code readable by using clear method names (loadData, getFrequency, printHistogram, createBackupFile) and consistent formatting. I separated concerns so each method has one clear responsibility. The capitalization logic is centralized in the display methods, making it easy to change later.
